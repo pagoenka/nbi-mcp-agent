@@ -2,17 +2,6 @@
 
 A Jupyter Notebook Intelligence agent for MCP operations.
 
-## Installation
-
-```bash
-pip install nbi_mcp_agent
-```
-
-## Features
-
-- Model comparison capabilities
-- Performance profiling
-- Integration with Jupyter notebooks
 
 ## License
 
