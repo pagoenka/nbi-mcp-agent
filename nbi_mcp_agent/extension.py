@@ -1,7 +1,6 @@
 """MCP Extension for Jupyter Notebook Intelligence."""
 
 import asyncio
-import json
 import logging
 import os
 import uuid
@@ -16,7 +15,6 @@ from fuzzy_json import loads as fuzzy_json_loads
 from mcp.types import TextResourceContents
 from mcp import ClientSession
 from mcp.client.stdio import stdio_client
-import nest_asyncio
 
 
 logging = logging.getLogger(__name__)
@@ -64,23 +62,6 @@ class MCPClient:
             if tool in tools:
                 return server
         return None
-
-
-    # async def cleanup_servers(self) -> None:
-    #     """Clean up all servers properly."""
-    #     try:
-    #         cleanup_tasks = [asyncio.create_task(server.cleanup()) for server in self.servers]
-
-    #         if cleanup_tasks:
-    #             try:
-    #                 await asyncio.gather(*cleanup_tasks, return_exceptions=True)
-    #             except Exception as e:
-    #                 logging.warning(f"Warning during final cleanup: {e}")
-    #             except asyncio.CancelledError as e:
-    #                 logging.warning(f"Cleanup cancelled by: {e}")
-    #     except Exception as e:
-    #         logging.error(f"Error during final cleanup: {e}")
-    #         logging.error(f"Stack trace:", exc_info=True)
 
     async def cleanup_servers(self) -> None:
         """Clean up all servers properly."""
@@ -375,7 +356,7 @@ class MCPExtension(NotebookIntelligenceExtension):
 
     @property
     def url(self) -> str:
-        return "https://github.com/notebook-intelligence/nbi-mcp-agent"
+        return "https://github.com/pagoenka/nbi-mcp-agent"
 
     def activate(self, host: Host) -> None:
         """Activate the MCP extension."""

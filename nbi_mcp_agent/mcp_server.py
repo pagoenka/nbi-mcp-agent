@@ -1,9 +1,7 @@
 import asyncio
 import json
 import logging
-import traceback
 from typing import Any
-import anyio
 from mcp import ClientSession
 from fuzzy_json import loads as fuzzy_json_loads
 from mcp import ClientSession, StdioServerParameters
@@ -11,7 +9,6 @@ from mcp.client.stdio import stdio_client
 from contextlib import AsyncExitStack
 import shutil
 import os
-import nest_asyncio
 
 
 logging = logging.getLogger(__name__)
@@ -96,7 +93,6 @@ class Server:
         delay: float = 1.0,
     ) -> Any:
         """Execute a tool on the server."""
-        # nest_asyncio.apply()
 
         if not self.session:
             raise RuntimeError(f"Server {self.name} not initialized")
