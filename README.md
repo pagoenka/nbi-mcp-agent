@@ -1,6 +1,6 @@
 # NBI MCP Agent
 
-A Jupyter Notebook Intelligence agent for MCP (Model Comparison and Profiling) operations.
+A Jupyter Notebook Intelligence agent for MCP operations.
 
 ## Installation
 
