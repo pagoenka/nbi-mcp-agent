@@ -60,14 +60,6 @@ jupyter server extension enable nbi_mcp_agent
 
 ```
 
-You can watch the source directory and run JupyterLab at the same time in different terminals to watch for changes in the extension's source and automatically rebuild the extension.
-
-```bash
-# Watch the source directory in one terminal, automatically rebuilding when needed
-jlpm watch
-# Run JupyterLab in another terminal
-jupyter lab
-```
 
 ## References
 Extensions code is inspired or taken from below sources
