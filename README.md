@@ -10,10 +10,10 @@
 
 ![MCP Agent Options](media/mcp_agent_option.png)
 
-# Update the server config path 
+## Update the server config path 
 ![Update MCP Server Config](media/update_mcp_config_json.gif)
 
-The server json file is format should be like 
+## The server json file is format should be like 
 
 ```
 {
@@ -41,10 +41,35 @@ The server json file is format should be like
 
 ```
 
-# Calling MCP Tools
+## Calling MCP Tools
 ![Calling MCP Tools](media/mcp_call_tool.gif)
 
-# References
+
+### Development install
+
+
+
+```bash
+# Clone the repo to your local environment
+# Change directory to the nbi_mcp_agent directory
+# Install package in development mode
+pip install -e "."
+
+# Server extension must be manually installed in develop mode
+jupyter server extension enable nbi_mcp_agent
+
+```
+
+You can watch the source directory and run JupyterLab at the same time in different terminals to watch for changes in the extension's source and automatically rebuild the extension.
+
+```bash
+# Watch the source directory in one terminal, automatically rebuilding when needed
+jlpm watch
+# Run JupyterLab in another terminal
+jupyter lab
+```
+
+## References
 Extensions code is inspired or taken from below sources
 - [Introducing Notebook Intelligence!](https://blog.jupyter.org/introducing-notebook-intelligence-3648c306b91a)
 - [Building AI Agents for JupyterLab using Notebook Intelligence](https://blog.jupyter.org/building-ai-agents-for-jupyterlab-using-notebook-intelligence-0515d4c41a61)
