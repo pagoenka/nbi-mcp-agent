@@ -2,6 +2,8 @@
 
 [A Jupyter Notebook Intelligence ](https://github.com/notebook-intelligence/notebook-intelligence) MCP Agent extension
 
+Note : NBI now supports MCP in built [NBI MCP Support](https://github.com/notebook-intelligence/notebook-intelligence?tab=readme-ov-file#model-context-protocol-mcp-support)
+
 - Adds @mcp-agent participant in the nbi
 - Available commands with @mcp-agent
 - @mcp-agent /help 
